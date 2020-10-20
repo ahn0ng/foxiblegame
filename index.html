@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+		<script type="text/javascript" src="p5.js"></script>
+		<script type="text/javascript" src="sketch.js"></script>
+		<script type="text/javascript">
+			Event.observe(window, "load", function() {
+				new starGame("screen", 15, "score");
+			});
+		</script>
+		<link rel="stylesheet" media="screen" type="text/css" href="star.css" />
+
+		<title>Foxible</title>
+	</head>
+	<body>
+		<a href="#" id="screen" onclick="return false;"></a>
+		<input type="text" id="score" value="0" readonly="true" size="5">
+	</body>
+</html>

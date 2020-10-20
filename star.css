@@ -1,0 +1,22 @@
+#screen {
+	border:1px solid gray;
+	width:500px; height:600px;
+	display:block;
+	text-decoration:none;
+
+	background-color:white;
+	color:#000;
+}
+
+#score {
+	position:relative;
+	top:-600px;
+	left:5px;
+	
+	background-color:transparent;
+	border:0px;
+	font-size:30px;
+	font-family:Tahoma;
+	
+	cursor:default;
+}
