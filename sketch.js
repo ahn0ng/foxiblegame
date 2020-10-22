@@ -32,6 +32,10 @@ ImageList.prototype = {
 	}
 }
 
+	
+
+
+
 function star(_game) {
 
 	
@@ -53,7 +57,7 @@ function star(_game) {
 	this.initialize = function(_game) {
 		
 		game = _game;
-		img = new ImageList("images/star.gif", 22, 17);
+		img = new ImageList("images/star.png", 22, 17);
 		
 		img.object.style.position = "absolute";
 		game.screen.appendChild(img.object);
@@ -104,7 +108,7 @@ function star(_game) {
 		
 		if (index < 0) {
 			
-			if (index > -3) // 바닥에 떨어져도 어느정도까지는 충돌체크
+			if (index > -3) 
 				if (game.playing && game.fox.collision(pos[0] + 22 / 2)) // 충돌했으면
 					game.gameOver();
 			
@@ -183,10 +187,10 @@ function fox(_game) {
 		
 		game = _game;
 		
-		img = new ImageList("images/fox.gif", 30, 30);
+		img = new ImageList("images/fox.png", 30, 30);
 		
 		img.object.style.position = "absolute";
-		img.object.style.top = "-25px";
+		img.object.style.top = "-25 px";
 		
 		game.screen.appendChild(img.object);
 	};
@@ -317,7 +321,7 @@ starGame.prototype = {
 
 	stars : [ ],
 	fox : null,
-	
+
 
 	left : false,
 	
@@ -352,6 +356,7 @@ starGame.prototype = {
 			this.stars.push(new star(this));
 		
 		this.fox = new fox(this);
+		
 		
 		Event.observe(this.screen, "keydown", this.onKeyDown.bindAsEventListener(this));
 		Event.observe(this.screen, "keyup", this.onKeyUp.bindAsEventListener(this));
@@ -433,7 +438,7 @@ starGame.prototype = {
 		this.recent = null;
 		
 		this.fox.kill();
-		this.showMessage("DEAD", 1500, this.gameReady.bind(this));
+		this.showMessage("GAME OVER", 1500, this.gameReady.bind(this));
 	},
 	
 	onKeyDown : function(e) {

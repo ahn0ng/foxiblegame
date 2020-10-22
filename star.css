@@ -1,11 +1,11 @@
 #screen {
-	border:1px solid gray;
+	border:1px solid rgb(245, 245, 245);
 	width:500px; height:600px;
 	display:block;
 	text-decoration:none;
 
-	background-color:white;
-	color:#000;
+	background-color:#53FA52;
+	color:rgb(255, 255, 255);
 }
 
 #score {
@@ -14,6 +14,7 @@
 	left:5px;
 	
 	background-color:transparent;
+	color:rgb(255, 255, 255);
 	border:0px;
 	font-size:30px;
 	font-family:Tahoma;
